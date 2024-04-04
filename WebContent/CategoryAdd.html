@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>:: New Category ::</title>
+<script>
+	function validate() {
+		var categoryName = document.getElementById("catName").value;
+		if(categoryName.trim()==""){
+			alert("Category Name must be filled out");
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<h3>Category</h3>
+	<form name="categoryForm" method="post" action="CategoryAction.jsp" onsubmit="return validate();">
+		Category Name<input type="text" name="catName" id ="catName" /><br><br> 
+		<input type="submit" value="Save"/>
+	</form>
+</body>
+</html>
